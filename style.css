@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+img{
+  width: 100%;
+  object-fit: cover;
+}
+body{
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  padding: 40px 3%;
+  color: hsl(0, 0%, 8%);
+}
+a{
+  color: inherits;
+  text-decoration: none;
+  display: inline-block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+header section{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+nav{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav div{
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+.btn{
+  border: 1.5px solid hsl(0, 0%, 8%);
+  padding: 12px 20px;
+  border-radius: 15px;
+
+}
+main{
+  margin:50px 100px 0;
+  display: flex;
+  gap: 80px;
+  align-items: end;
+}
+main section{
+  width: 50%;
+  justify-content: center;
+}
+main div{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+main section:first-child{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+h1{
+  font-size: clamp(40px,4.5vw,60px);
+  max-width: 400px;
+}
+main p{
+  line-height: 1.5;
+  color: hsl(0, 0%, 41%)
+}
+main a{
+  background: hsl(0, 0%, 8%);
+  color: white;
+  width: fit-content;
+}
+main img{
+  max-width: 500px;
+}
+.menu{
+  display: none;
+}
+@media screen and (max-width: 700px){
+  header nav, header .auth{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+  main{
+    flex-direction: column-reverse;
+  }
+  main section{
+    width: 100%;
+  }
+  main{
+    margin-inline: 0;
+    text-align: center;
+  }
+  h1{
+    max-width: unset;
+  }
+ main section:first-child{
+  align-items: center;
+  gap: 20px;
+ }
+ main div{
+  margin-top: 20px;
+ } 
+}
+main a:hover{
+  background-color: brown;
+}
+h1::first-letter{
+  color: lime;
+}
+body[data-theme="dark"]{
+  background-color: #434343;
+  color: white;
+}
